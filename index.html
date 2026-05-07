@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Brinda Clinic – Your trusted healthcare partner in Andaman and Nicobar Islands. General consultation, dermatology & cosmetic procedures in Port Blair."/>
+  <meta name="keywords" content="Brinda Clinic, Port Blair, healthcare, dermatology, cosmetic, general consultation, Andaman"/>
+  <meta property="og:title" content="Brinda Clinic – Your Trusted Healthcare Partner"/>
+  <meta property="og:description" content="Comprehensive healthcare in Port Blair, Andaman & Nicobar Islands."/>
+  <meta property="og:type" content="website"/>
+  <title>Brinda Clinic – Your Trusted Healthcare Partner</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- AOS Scroll Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"/>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════ LOADER ══════════════════════ -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">B</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ NAV ══════════════════════ -->
+<nav id="navbar">
+  <a class="nav-brand" onclick="showPage('home')">
+    <div class="nav-logo-box">B</div>
+    <span class="nav-brand-text">BRINDA<br>CLINIC</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="showPage('home')"   class="nav-link active"   data-page="home">Home</a></li>
+    <li><a onclick="showPage('about')"  class="nav-link"          data-page="about">About</a></li>
+    <li><a onclick="showPage('services')" class="nav-link"        data-page="services">Services</a></li>
+    <li><a onclick="showPage('team')"   class="nav-link"          data-page="team">Team</a></li>
+    <li><a onclick="showPage('contact')" class="nav-link"         data-page="contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="callNow()">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.1 2.18 2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Now
+  </button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');closeMenu()"   class="mob-link active" data-page="home">Home</a>
+  <a onclick="showPage('about');closeMenu()"  class="mob-link"        data-page="about">About</a>
+  <a onclick="showPage('services');closeMenu()" class="mob-link"      data-page="services">Services</a>
+  <a onclick="showPage('team');closeMenu()"   class="mob-link"        data-page="team">Team</a>
+  <a onclick="showPage('contact');closeMenu()" class="mob-link"       data-page="contact">Contact</a>
+  <button class="mob-cta" onclick="callNow()">📞 +91 94760 21494</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="pulse-dot"></span>
+        Andaman &amp; Nicobar Islands
+      </div>
+      <h1 class="hero-title">YOUR<br>TRUSTED<br><em>HEALTHCARE</em><br>PARTNER</h1>
+      <p class="hero-sub">At Brinda Clinic, we are committed to providing exceptional medical care with compassion and professionalism. Located in the heart of Port Blair.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+        <button class="btn-ghost"   onclick="callNow()">Call Now</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num" data-count="5000">0</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="3">0</div>
+        <div class="stat-label">Expert Doctors</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="3">0</div>
+        <div class="stat-label">Specialisations</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="11">0</div>
+        <div class="stat-label">Hours/Day Open</div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">Scroll ↓</div>
+  </section>
+
+  <!-- SERVICES STRIP -->
+  <section class="services-strip">
+    <div class="strip-label" data-aos="fade-up">Comprehensive Healthcare</div>
+    <h2 class="strip-title" data-aos="fade-up" data-aos-delay="60">What We Offer</h2>
+    <div class="services-grid">
+      <div class="scard" data-aos="fade-up" data-aos-delay="80">
+        <div class="scard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>General Consultation</h3>
+        <p>Comprehensive medical check-ups and consultations for all age groups by experienced doctors.</p>
+        <button class="scard-btn" onclick="showPage('services')">Learn more →</button>
+      </div>
+      <div class="scard scard-dark" data-aos="fade-up" data-aos-delay="140">
+        <div class="scard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Skin Care &amp; Dermatology</h3>
+        <p>Advanced dermatological treatments for acne, eczema, psoriasis, fungal infections and more.</p>
+        <button class="scard-btn" onclick="showPage('services')">Learn more →</button>
+      </div>
+      <div class="scard" data-aos="fade-up" data-aos-delay="200">
+        <div class="scard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Cosmetic Procedures</h3>
+        <p>Safe, effective cosmetic treatments to enhance your natural beauty with the highest hygiene standards.</p>
+        <button class="scard-btn" onclick="showPage('services')">Learn more →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" data-aos="fade-up">
+    <div class="cta-inner">
+      <div>
+        <h2>Ready to Take Care of Your Health?</h2>
+        <p>Book an appointment today or reach out for any health concerns. We're here to help.</p>
+      </div>
+      <div class="cta-btns">
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+        <button class="btn-wa" onclick="whatsapp()">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <div class="why-text" data-aos="fade-right">
+      <div class="strip-label">Why Choose Us</div>
+      <h2 class="strip-title">Care You Can<br>Count On</h2>
+      <p class="strip-sub">We combine modern medicine with a genuine patient-first approach—taking time to listen, understand, and treat.</p>
+      <div class="values-list">
+        <div class="value-item" data-aos="fade-right" data-aos-delay="80">
+          <div class="value-num">01</div>
+          <div>
+            <h4>Patient-Centered Care</h4>
+            <p>Personalised attention and tailored treatment plans for every patient.</p>
+          </div>
+        </div>
+        <div class="value-item" data-aos="fade-right" data-aos-delay="140">
+          <div class="value-num">02</div>
+          <div>
+            <h4>Hygiene &amp; Safety</h4>
+            <p>Highest cleanliness standards and strict safety protocols always.</p>
+          </div>
+        </div>
+        <div class="value-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="value-num">03</div>
+          <div>
+            <h4>Experienced Team</h4>
+            <p>Years of expertise and continuous learning to keep up with medical advances.</p>
+          </div>
+        </div>
+        <div class="value-item" data-aos="fade-right" data-aos-delay="260">
+          <div class="value-num">04</div>
+          <div>
+            <h4>Quality Treatment</h4>
+            <p>Evidence-based practices and modern equipment for best outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual" data-aos="fade-left" data-aos-delay="100">
+      <div class="why-card-big">
+        <div class="why-icon-big">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="64" height="64"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <p class="why-card-text">Evidence-Based Medicine</p>
+        <span class="why-card-sub">Trusted by 5,000+ patients across A&amp;N Islands</span>
+      </div>
+      <div class="why-card-sm">
+        <span>⏰</span>
+        <div>
+          <strong>Mon – Sat</strong>
+          <small>9 AM – 8 PM</small>
+        </div>
+      </div>
+      <div class="why-card-sm why-card-sm-2">
+        <span>📍</span>
+        <div>
+          <strong>Garacharama</strong>
+          <small>Port Blair, A&amp;N</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM TEASER -->
+  <section class="team-teaser">
+    <div class="strip-label" data-aos="fade-up">Our Specialists</div>
+    <h2 class="strip-title" data-aos="fade-up" data-aos-delay="60">Meet the Team</h2>
+    <div class="team-grid">
+      <div class="tmember" data-aos="fade-up" data-aos-delay="80">
+        <div class="tmember-img tmember-img-1"></div>
+        <div class="tmember-info">
+          <h4>Dr. Rajesh Kumar</h4>
+          <span>MBBS, MD · General Physician</span>
+        </div>
+      </div>
+      <div class="tmember" data-aos="fade-up" data-aos-delay="140">
+        <div class="tmember-img tmember-img-2"></div>
+        <div class="tmember-info">
+          <h4>Dr. Priya Sharma</h4>
+          <span>MBBS, MD (Dermatology) · Dermatologist</span>
+        </div>
+      </div>
+      <div class="tmember" data-aos="fade-up" data-aos-delay="200">
+        <div class="tmember-img tmember-img-3"></div>
+        <div class="tmember-info">
+          <h4>Dr. Anil Verma</h4>
+          <span>MBBS, DNB · Cosmetic Specialist</span>
+        </div>
+      </div>
+    </div>
+    <button class="btn-outline-dark" onclick="showPage('team')" data-aos="fade-up">View Full Team →</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer-home">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:16px">
+          <div class="nav-logo-box">B</div>
+          <span class="nav-brand-text" style="color:rgba(255,255,255,0.9)">BRINDA<br>CLINIC</span>
+        </div>
+        <p>Your trusted healthcare partner in Andaman and Nicobar Islands, providing quality medical care with uncompromising standards.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>+91 94760 21494</li>
+          <li>info@brindaclinic.com</li>
+          <li>Mon–Sat: 9:00 AM – 8:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <ul>
+          <li>Aarav Square, Opp. Govt. Medical College</li>
+          <li>Garacharama, Sri Vijaya Puram</li>
+          <li>A&amp;N Islands 744105</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About Us</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Brinda Clinic. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <section class="page-hero">
+    <div class="ph-noise"></div>
+    <div class="ph-content">
+      <div class="strip-label" style="color:rgba(255,255,255,0.5)">Who We Are</div>
+      <h1>ABOUT<br>BRINDA<br>CLINIC</h1>
+      <p>Dedicated to providing exceptional healthcare services to the community of Andaman and Nicobar Islands.</p>
+    </div>
+  </section>
+
+  <section class="about-mission">
+    <div class="am-text" data-aos="fade-right">
+      <div class="strip-label">Our Mission</div>
+      <h2 class="strip-title">Healthcare for Everyone</h2>
+      <p>Brinda Clinic was established with a vision to provide accessible, high-quality healthcare to the residents of Port Blair and surrounding areas. We believe that everyone deserves compassionate medical care delivered with professionalism and respect.</p>
+      <p>Our clinic combines modern medical practices with a patient-first approach. We take the time to listen to your concerns, understand your health goals, and develop treatment plans that work for you.</p>
+      <p>Located conveniently at Aarav Square in Garacharama, we serve as a trusted healthcare partner for families across the Andaman and Nicobar Islands.</p>
+    </div>
+    <div class="am-visual" data-aos="fade-left" data-aos-delay="100">
+      <div class="am-img-box">
+        <div class="am-img"></div>
+        <div class="am-badge">Est. 2020</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="core-values">
+    <div class="strip-label" data-aos="fade-up">What Guides Us</div>
+    <h2 class="strip-title" data-aos="fade-up" data-aos-delay="60">Our Core Values</h2>
+    <div class="values-grid">
+      <div class="vcard" data-aos="fade-up" data-aos-delay="80">
+        <div class="vcard-icon">❤️</div>
+        <h3>Patient-Centered Care</h3>
+        <p>Every patient receives personalised attention and treatment plans tailored to their unique needs.</p>
+      </div>
+      <div class="vcard" data-aos="fade-up" data-aos-delay="130">
+        <div class="vcard-icon">🛡️</div>
+        <h3>Hygiene &amp; Safety</h3>
+        <p>We maintain the highest standards of cleanliness and follow strict protocols to ensure patient safety.</p>
+      </div>
+      <div class="vcard" data-aos="fade-up" data-aos-delay="180">
+        <div class="vcard-icon">🎓</div>
+        <h3>Experienced Team</h3>
+        <p>Our medical professionals bring years of expertise and stay updated with the latest medical advances.</p>
+      </div>
+      <div class="vcard" data-aos="fade-up" data-aos-delay="230">
+        <div class="vcard-icon">🏆</div>
+        <h3>Quality Treatment</h3>
+        <p>We use evidence-based practices and modern equipment to deliver the best possible outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-cta cta-banner" data-aos="fade-up">
+    <div class="cta-inner">
+      <div>
+        <h2>Ready to Experience Better Healthcare?</h2>
+        <p>Book a consultation and let us take care of your health needs with expertise and compassion.</p>
+      </div>
+      <div class="cta-btns">
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+        <button class="btn-ghost" onclick="showPage('contact')">Contact Us</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:16px">
+          <div class="nav-logo-box">B</div>
+          <span class="nav-brand-text" style="color:rgba(255,255,255,0.9)">BRINDA<br>CLINIC</span>
+        </div>
+        <p>Your trusted healthcare partner in Andaman and Nicobar Islands.</p>
+      </div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>+91 94760 21494</li><li>info@brindaclinic.com</li><li>Mon–Sat: 9:00 AM – 8:00 PM</li><li>Sunday: Closed</li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Brinda Clinic. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SERVICES PAGE
+══════════════════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <section class="page-hero">
+    <div class="ph-noise"></div>
+    <div class="ph-content">
+      <div class="strip-label" style="color:rgba(255,255,255,0.5)">What We Do</div>
+      <h1>OUR<br>SERVICES</h1>
+      <p>Comprehensive healthcare solutions tailored to your needs, delivered with expertise and compassion.</p>
+    </div>
+  </section>
+
+  <section class="services-detail">
+
+    <div class="sd-row" data-aos="fade-up">
+      <div class="sd-text">
+        <div class="sd-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2>General Medical Consultation</h2>
+        <p>Our general consultation services cover a wide range of health concerns for patients of all ages. From routine check-ups to diagnosis and treatment of common illnesses, our experienced doctors provide comprehensive care.</p>
+        <p>We take the time to understand your symptoms, medical history, and lifestyle to develop effective treatment plans. Whether you need preventive care, management of chronic conditions, or treatment for acute illnesses, we are here to help.</p>
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+      </div>
+      <div class="sd-img sd-img-1"></div>
+    </div>
+
+    <div class="sd-row sd-row-rev" data-aos="fade-up" data-aos-delay="60">
+      <div class="sd-img sd-img-2"></div>
+      <div class="sd-text">
+        <div class="sd-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="28" height="28"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h2>Skin Care &amp; Dermatology</h2>
+        <p>Our dermatology services address various skin, hair, and nail conditions with evidence-based treatments. We treat acne, eczema, psoriasis, fungal infections, and other dermatological concerns.</p>
+        <p>Our approach combines medical expertise with the latest treatment protocols to help you achieve healthy, clear skin. We also provide guidance on proper skincare routines and preventive measures.</p>
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+      </div>
+    </div>
+
+    <div class="sd-row" data-aos="fade-up" data-aos-delay="80">
+      <div class="sd-text">
+        <div class="sd-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="28" height="28"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h2>Cosmetic Procedures</h2>
+        <p>We offer safe and effective cosmetic treatments designed to enhance your natural beauty and boost your confidence. Our cosmetic services are performed with meticulous attention to detail and the highest standards of hygiene.</p>
+        <p>From anti-aging treatments to skin rejuvenation procedures, we use proven techniques to deliver naturally-looking results. Each treatment plan is customized to your unique needs and aesthetic goals.</p>
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+      </div>
+      <div class="sd-img sd-img-3"></div>
+    </div>
+
+  </section>
+
+  <section class="not-sure cta-banner" data-aos="fade-up">
+    <div class="cta-inner">
+      <div>
+        <h2>Not Sure Which Service You Need?</h2>
+        <p>Our team is here to help you find the right treatment. Book a consultation and we'll guide you through the best options.</p>
+      </div>
+      <div class="cta-btns">
+        <button class="btn-primary" onclick="openModal()">Consult With Us →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:16px"><div class="nav-logo-box">B</div><span class="nav-brand-text" style="color:rgba(255,255,255,0.9)">BRINDA<br>CLINIC</span></div>
+        <p>Your trusted healthcare partner in Andaman and Nicobar Islands.</p>
+      </div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>+91 94760 21494</li><li>info@brindaclinic.com</li><li>Mon–Sat: 9:00 AM – 8:00 PM</li><li>Sunday: Closed</li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Brinda Clinic. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     TEAM PAGE
+══════════════════════════════════════════════════════ -->
+<div class="page" id="page-team">
+  <section class="page-hero">
+    <div class="ph-noise"></div>
+    <div class="ph-content">
+      <div class="strip-label" style="color:rgba(255,255,255,0.5)">The People Behind Your Care</div>
+      <h1>MEET<br>OUR<br>TEAM</h1>
+      <p>Experienced medical professionals dedicated to your health and well-being.</p>
+    </div>
+  </section>
+
+  <section class="team-full">
+    <div class="tf-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="tf-img tf-img-1"></div>
+      <div class="tf-info">
+        <h3>Dr. Rajesh Kumar</h3>
+        <div class="tf-creds">MBBS, MD</div>
+        <div class="tf-role">General Physician</div>
+        <p>Dr. Rajesh Kumar brings years of clinical experience in general medicine, providing comprehensive care for patients of all ages. His patient-first approach and thorough diagnostic skills make him a trusted physician for the community.</p>
+        <button class="btn-outline-dark" onclick="openModal()">Book a Consultation</button>
+      </div>
+    </div>
+    <div class="tf-card tf-card-rev" data-aos="fade-up" data-aos-delay="100">
+      <div class="tf-img tf-img-2"></div>
+      <div class="tf-info">
+        <h3>Dr. Priya Sharma</h3>
+        <div class="tf-creds">MBBS, MD (Dermatology)</div>
+        <div class="tf-role">Dermatologist</div>
+        <p>Dr. Priya Sharma is a highly qualified dermatologist specialising in medical and cosmetic dermatology. She combines evidence-based treatments with a compassionate approach to help patients achieve healthy, glowing skin.</p>
+        <button class="btn-outline-dark" onclick="openModal()">Book a Consultation</button>
+      </div>
+    </div>
+    <div class="tf-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="tf-img tf-img-3"></div>
+      <div class="tf-info">
+        <h3>Dr. Anil Verma</h3>
+        <div class="tf-creds">MBBS, DNB</div>
+        <div class="tf-role">Cosmetic Specialist</div>
+        <p>Dr. Anil Verma is a skilled cosmetic specialist dedicated to helping patients look and feel their best. With meticulous attention to detail and an artistic eye, he delivers natural-looking cosmetic results with the highest safety standards.</p>
+        <button class="btn-outline-dark" onclick="openModal()">Book a Consultation</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="committed cta-banner" data-aos="fade-up">
+    <div class="cta-inner">
+      <div>
+        <h2>Committed to Excellence</h2>
+        <p>Our team brings together years of experience, specialised training, and a genuine commitment to patient care. We believe in building lasting relationships with our patients.</p>
+      </div>
+      <div class="cta-btns">
+        <button class="btn-primary" onclick="openModal()">Book Appointment →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:16px"><div class="nav-logo-box">B</div><span class="nav-brand-text" style="color:rgba(255,255,255,0.9)">BRINDA<br>CLINIC</span></div>
+        <p>Your trusted healthcare partner in Andaman and Nicobar Islands.</p>
+      </div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>+91 94760 21494</li><li>info@brindaclinic.com</li><li>Mon–Sat: 9:00 AM – 8:00 PM</li><li>Sunday: Closed</li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Brinda Clinic. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <section class="page-hero">
+    <div class="ph-noise"></div>
+    <div class="ph-content">
+      <div class="strip-label" style="color:rgba(255,255,255,0.5)">Reach Out</div>
+      <h1>GET<br>IN TOUCH</h1>
+      <p>We're here to help. Reach out for appointments, inquiries, or any health concerns.</p>
+    </div>
+  </section>
+
+  <section class="contact-layout">
+    <div class="contact-info" data-aos="fade-right">
+      <h2>Contact Information</h2>
+      <div class="ci-item">
+        <div class="ci-icon">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>Aarav Square, Opposite Govt. Medical College<br>Garacharama, Sri Vijaya Puram (Port Blair)<br>Andaman and Nicobar Islands 744105</p>
+        </div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p>+91 94760 21494</p>
+        </div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p>info@brindaclinic.com</p>
+        </div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-icon">🕐</div>
+        <div>
+          <h4>Hours</h4>
+          <p>Monday – Saturday: 9:00 AM – 8:00 PM<br>Sunday: Closed</p>
+        </div>
+      </div>
+      <div class="ci-actions">
+        <button class="btn-primary" onclick="callNow()">📞 Call Now</button>
+        <button class="btn-wa"      onclick="whatsapp()">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <div class="contact-form-box" data-aos="fade-left" data-aos-delay="80">
+      <h2>Send Us a Message</h2>
+      <div id="contactForm">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="fname" placeholder="Enter your name"/>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="fphone" placeholder="+91 00000 00000"/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="fmsg" rows="5" placeholder="How can we help you?"></textarea>
+        </div>
+        <button class="btn-primary btn-full" onclick="sendForm()">Send Message →</button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h3>Message Sent!</h3>
+        <p>Thank you! We'll get back to you shortly on WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section" data-aos="fade-up">
+    <h3>Find Us on the Map</h3>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.8!2d92.7265!3d11.6234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x308992700b3e79cd%3A0x3dfde35699b7e6ba!2sGaracharama%2C+Port+Blair!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:16px"><div class="nav-logo-box">B</div><span class="nav-brand-text" style="color:rgba(255,255,255,0.9)">BRINDA<br>CLINIC</span></div>
+        <p>Your trusted healthcare partner in Andaman and Nicobar Islands.</p>
+      </div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>+91 94760 21494</li><li>info@brindaclinic.com</li><li>Mon–Sat: 9:00 AM – 8:00 PM</li><li>Sunday: Closed</li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Brinda Clinic. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════ APPOINTMENT MODAL ══════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-header">
+      <h2>Book Appointment</h2>
+      <p>Fill in the form and we'll confirm via WhatsApp.</p>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" id="mname" placeholder="Your full name"/>
+      </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" id="mphone" placeholder="+91 00000 00000"/>
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select id="mservice">
+          <option value="">Select a service</option>
+          <option>General Consultation</option>
+          <option>Skin Care &amp; Dermatology</option>
+          <option>Cosmetic Procedures</option>
+          <option>Not sure – need guidance</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Preferred Date &amp; Time</label>
+        <input type="datetime-local" id="mdatetime"/>
+      </div>
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea id="mnotes" rows="3" placeholder="Any specific concerns or symptoms..."></textarea>
+      </div>
+      <button class="btn-primary btn-full" onclick="submitModal()">Confirm via WhatsApp →</button>
+    </div>
+    <div class="modal-success" id="modalSuccess" style="display:none">
+      <div class="success-icon">✓</div>
+      <h3>Appointment Requested!</h3>
+      <p>We've received your request and will confirm shortly.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ FLOATING BUTTONS ══════════════════════ -->
+<a class="fab-wa" onclick="whatsapp()" title="Chat on WhatsApp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
